@@ -13,8 +13,6 @@ import {
 } from '@react-native-community/hooks';
 
 const App = () => {
-  console.log(useDimensions());
-  console.log(useDeviceOrientation());
   const {landscape} = useDeviceOrientation();
   return (
     <SafeAreaView style={styles.container}>

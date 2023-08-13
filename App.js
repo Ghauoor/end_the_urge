@@ -8,8 +8,10 @@ const App = () => {
         flex: 1,
         flexDirection: 'row', // this will be main axis
         justifyContent: 'center', // align according to main axis
-        alignItems: 'center', // this will aign to the secondary axis
+        alignItems: 'center', // this will aign to the secondary axis when the flexwarp is enable then it behave according to the each line
         backgroundColor: '#fff',
+        flexWrap: 'wrap',
+        alignContent: 'center',
       }}>
       <View
         style={{
@@ -31,6 +33,20 @@ const App = () => {
           height: 100,
           width: 100,
           backgroundColor: 'tomato',
+        }}
+      />
+      <View
+        style={{
+          height: 100,
+          width: 100,
+          backgroundColor: 'grey',
+        }}
+      />
+      <View
+        style={{
+          height: 100,
+          width: 100,
+          backgroundColor: 'greenyellow',
         }}
       />
     </View>

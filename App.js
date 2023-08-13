@@ -1,36 +1,42 @@
-import {
-  StyleSheet,
-  SafeAreaView,
-  Button,
-  Alert,
-  View,
-  Dimensions,
-} from 'react-native';
 import React from 'react';
-import {
-  useDimensions,
-  useDeviceOrientation,
-} from '@react-native-community/hooks';
+import {View, StyleSheet} from 'react-native';
 
 const App = () => {
-  const {landscape} = useDeviceOrientation();
   return (
-    <SafeAreaView style={styles.container}>
+    <View
+      style={{
+        flex: 1,
+        flexDirection: 'row', // this will be main axis
+        justifyContent: 'center', // align according to main axis
+        alignItems: 'center', // this will aign to the secondary axis
+        backgroundColor: '#fff',
+      }}>
       <View
         style={{
+          height: 100,
+          width: 100,
+          // alignSelf: 'flex-start', this apply to the sigle child only.
           backgroundColor: 'dodgerblue',
-          width: '100%',
-          height: landscape ? '100%' : '30%',
-        }}></View>
-    </SafeAreaView>
+        }}
+      />
+      <View
+        style={{
+          height: 100,
+          width: 100,
+          backgroundColor: 'gold',
+        }}
+      />
+      <View
+        style={{
+          height: 100,
+          width: 100,
+          backgroundColor: 'tomato',
+        }}
+      />
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
+const styles = StyleSheet.create({});
 
 export default App;

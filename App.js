@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import AppText from './src/components/AppText';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <AppText>I love React Native</AppText>
+      <Icon name="email" size={200} color="dodgerblue" />
     </View>
   );
 };

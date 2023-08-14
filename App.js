@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import AppText from './src/components/AppText';
+import AppButton from './src/components/AppButton';
 
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -13,7 +14,7 @@ const App = () => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <AppText>i love React native</AppText>
+      <AppButton title="Login" onPress={() => console.log('Tapped')} />
     </View>
   );
 };

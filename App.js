@@ -5,9 +5,10 @@ import Screen from './src/components/Screen';
 import ListItem from './src/components/ListItem';
 import Icons from './src/components/Icons';
 import AccountScreen from './src/screens/AccountScreen';
+import ListingsScreen from './src/screens/ListingsScreen';
 
 const App = () => {
-  return <AccountScreen />;
+  return <ListingsScreen />;
 };
 
 const styles = StyleSheet.create({});

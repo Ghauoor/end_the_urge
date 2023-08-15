@@ -1,24 +1,22 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import AppText from './src/components/AppText';
-import AppButton from './src/components/AppButton';
-import WelcomScreen from './src/screens/WelcomScreen';
-
-// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Card from './src/components/Card';
 
 const App = () => {
-  return <WelcomScreen />;
-  // return (
-  //   <View
-  //     style={{
-  //       flex: 1,
-  //       flexDirection: 'row',
-  //       alignItems: 'center',
-  //       justifyContent: 'center',
-  //     }}>
-  //     <AppButton title="Login" onPress={() => console.log('Tapped')} />
-  //   </View>
-  // );
+  return (
+    <View
+      style={{
+        backgroundColor: '#f8f4f4',
+        padding: 20,
+        paddingTop: 100,
+      }}>
+      <Card
+        title="Red Jacket for sale"
+        subTitle="100$"
+        imageUri={require('./assets/images/jacket.jpg')}
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({});

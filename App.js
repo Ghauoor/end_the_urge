@@ -1,22 +1,9 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Card from './src/components/Card';
+import ListingDetailsScreen from './src/screens/ListingDetailsScreen';
 
 const App = () => {
-  return (
-    <View
-      style={{
-        backgroundColor: '#f8f4f4',
-        padding: 20,
-        paddingTop: 100,
-      }}>
-      <Card
-        title="Red Jacket for sale"
-        subTitle="100$"
-        imageUri={require('./assets/images/jacket.jpg')}
-      />
-    </View>
-  );
+  return <ListingDetailsScreen />;
 };
 
 const styles = StyleSheet.create({});

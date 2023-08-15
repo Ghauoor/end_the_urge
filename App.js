@@ -1,12 +1,13 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-import ListingDetailsScreen from './src/screens/ListingDetailsScreen';
-import ViewImageScreen from './src/screens/ViewImageScreen';
-import MessagingScreen from './src/screens/MessagingScreen';
+import Screen from './src/components/Screen';
+import ListItem from './src/components/ListItem';
+import Icons from './src/components/Icons';
+import AccountScreen from './src/screens/AccountScreen';
 
 const App = () => {
-  return <MessagingScreen />;
+  return <AccountScreen />;
 };
 
 const styles = StyleSheet.create({});

@@ -19,8 +19,8 @@ const ListingDetailsScreen = () => {
         {/* List Item */}
         <View style={styles.userContainer}>
           <ListItem
-            image={require('../../assets/images/profile-image.png')}
-            title="Lisa"
+            image={require('../../assets/images/mosh.jpg')}
+            title="Mosh"
             subTitle="5 Listing"
           />
         </View>

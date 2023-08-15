@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     width: 70,
     borderRadius: 35,
     marginRight: 10,
+    backgroundColor: '#000',
   },
   title: {
     fontWeight: '500',

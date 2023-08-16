@@ -13,9 +13,9 @@ const listings = [
   },
   {
     id: 2,
-    title: 'Chair for Sale',
+    title: 'couch for Sale',
     price: 4000,
-    image: require('../../assets/images/chair.jpg'),
+    image: require('../../assets/images/couch.jpg'),
   },
 ];
 

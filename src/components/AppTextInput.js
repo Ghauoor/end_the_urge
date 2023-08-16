@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, TextInput, Platform} from 'react-native';
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
-
 import defaultStyles from '../config/styles';
 
 const AppTextInput = ({icon, ...otherProps}) => {

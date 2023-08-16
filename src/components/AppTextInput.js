@@ -1,15 +1,21 @@
 import React from 'react';
 import {View, StyleSheet, TextInput, Platform} from 'react-native';
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
-import colors from '../config/colors';
+
+import defaultStyles from '../config/styles';
 
 const AppTextInput = ({icon, ...otherProps}) => {
   return (
     <View style={styles.container}>
       {icon && (
-        <Icon name={icon} size={20} color={colors.medium} style={styles.icon} />
+        <Icon
+          name={icon}
+          size={20}
+          color={defaultStyles.colors.medium}
+          style={styles.icon}
+        />
       )}
-      <TextInput style={styles.textInput} {...otherProps} />
+      <TextInput style={defaultStyles.text} {...otherProps} />
     </View>
   );
 };
@@ -17,7 +23,7 @@ const AppTextInput = ({icon, ...otherProps}) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: colors.light,
+    backgroundColor: defaultStyles.colors.light,
     borderRadius: 25,
     width: '100%',
     marginVertical: 10,
@@ -26,12 +32,6 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
-  },
-  textInput: {
-    fontSize: 18,
-    fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir',
-    flex: 1,
-    color: colors.dark,
   },
 });
 

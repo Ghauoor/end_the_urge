@@ -39,7 +39,7 @@ const LoginScreen = () => {
               onChangeText={handleChange('email')}
               onBlur={() => setFieldTouched('email')}
             />
-            {touched.email && <ErrorMessage error={errors.email} />}
+            <ErrorMessage error={errors.email} visible={touched.email} />
             <AppTextInput
               autoCapitalize="none"
               icon="lock"
@@ -50,7 +50,7 @@ const LoginScreen = () => {
               secureTextEntry
               onChangeText={handleChange('password')}
             />
-            <ErrorMessage error={errors.password} />
+            <ErrorMessage error={errors.password} visible={touched.password} />
             <AppButton title="Login" onPress={handleSubmit} />
           </>
         )}

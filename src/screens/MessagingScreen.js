@@ -8,14 +8,14 @@ import ListItemDeleteAction from '../components/ListItemDeleteAction';
 const initialMessages = [
   {
     id: 1,
-    title: 'T1',
-    description: 'D1',
+    title: 'Ghayoor',
+    description: 'Hey Man How are you dude',
     image: require('../../assets/images/mosh.jpg'),
   },
   {
     id: 2,
-    title: 'T2',
-    description: 'D2',
+    title: 'Taimoor',
+    description: 'Can you help me in DSA and OOP',
     image: require('../../assets/images/mosh.jpg'),
   },
 ];

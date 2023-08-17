@@ -3,9 +3,9 @@ import {View, StyleSheet, TextInput, Platform} from 'react-native';
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import defaultStyles from '../config/styles';
 
-const AppTextInput = ({icon, ...otherProps}) => {
+const AppTextInput = ({icon, width = '100%', ...otherProps}) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {width}]}>
       {icon && (
         <Icon
           name={icon}
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: defaultStyles.colors.light,
     borderRadius: 25,
-    width: '100%',
+
     marginVertical: 10,
     alignItems: 'center',
     padding: 12,

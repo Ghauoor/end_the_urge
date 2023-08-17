@@ -13,12 +13,20 @@ import AppText from './AppText';
 import defaultStyles from '../config/styles';
 import PickerItem from './PickerItem';
 
-const AppPicker = ({icon, items, placeholder, onSelectItem, selectedItem}) => {
+const AppPicker = ({
+  icon,
+  items,
+  placeholder,
+  onSelectItem,
+  selectedItem,
+  width = '100%',
+  PickerItemComponent = PickerItem,
+}) => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <React.Fragment>
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-        <View style={styles.container}>
+        <View style={[styles.container, {width}]}>
           {icon && (
             <Icon
               name={icon}
@@ -46,7 +54,7 @@ const AppPicker = ({icon, items, placeholder, onSelectItem, selectedItem}) => {
           data={items}
           keyExtractor={items => items.value.toString()}
           renderItem={({item}) => (
-            <PickerItem
+            <PickerItemComponent
               label={item.label}
               onPress={() => {
                 setModalVisible(false), onSelectItem(item);
@@ -64,7 +72,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: defaultStyles.colors.light,
     borderRadius: 25,
-    width: '100%',
+
     marginVertical: 10,
     alignItems: 'center',
     padding: 15,

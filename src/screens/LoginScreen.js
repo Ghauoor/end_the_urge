@@ -9,6 +9,7 @@ import AppText from '../components/AppText';
 import AppButton from '../components/AppButton';
 import ErrorMessage from '../components/ErrorMessage';
 import AppFormField from '../components/AppFormField';
+import SubmitButton from '../components/SubmitButton';
 
 // Validation schema
 const validationSchema = Yup.object().shape({
@@ -28,7 +29,7 @@ const LoginScreen = () => {
         validationSchema={validationSchema}
         initialValues={{email: '', password: ''}}
         onSubmit={values => console.log(values)}>
-        {({handleChange, handleSubmit, errors, setFieldTouched, touched}) => (
+        {() => (
           <>
             <AppFormField
               name="email"
@@ -49,7 +50,7 @@ const LoginScreen = () => {
               textContentType="password"
               secureTextEntry
             />
-            <AppButton title="Login" onPress={handleSubmit} />
+            <SubmitButton title="Login" />
           </>
         )}
       </Formik>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import * as Yup from 'yup';
 
 import {AppForm, AppFormField, SubmitButton} from '../components/forms';
@@ -44,7 +44,7 @@ const RegisterScreen = () => {
           textContentType="password"
           secureTextEntry
         />
-        <SubmitButton title="Login" />
+        <SubmitButton title="Submit" />
       </AppForm>
     </Screen>
   );

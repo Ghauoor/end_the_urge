@@ -12,6 +12,7 @@ import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import AppText from './AppText';
 import defaultStyles from '../config/styles';
 import PickerItem from './PickerItem';
+import {number} from 'yup';
 
 const AppPicker = ({
   icon,
@@ -20,6 +21,7 @@ const AppPicker = ({
   onSelectItem,
   selectedItem,
   width = '100%',
+  numberOfColumns = 1,
   PickerItemComponent = PickerItem,
 }) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -52,9 +54,11 @@ const AppPicker = ({
         <Button title="Close" onPress={() => setModalVisible(false)}></Button>
         <FlatList
           data={items}
+          numColumns={numberOfColumns}
           keyExtractor={items => items.value.toString()}
           renderItem={({item}) => (
             <PickerItemComponent
+              item={item}
               label={item.label}
               onPress={() => {
                 setModalVisible(false), onSelectItem(item);

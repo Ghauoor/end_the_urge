@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import LoginScreen from './src/screens/LoginScreen';
+
+import ListingEditScreen from './src/screens/ListingEditScreen';
 
 const App = () => {
-  return <LoginScreen />;
+  return <ListingEditScreen />;
 };
 
 const styles = StyleSheet.create({});
